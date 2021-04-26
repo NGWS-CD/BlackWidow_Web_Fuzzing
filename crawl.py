@@ -8,7 +8,12 @@ import argparse
 from Classes import *
 
 parser = argparse.ArgumentParser(description='Crawler')
+<<<<<<< HEAD
 parser.add_argument("--debug", action='store_true',  help="Dont use path deconstruction and recon scan. Good for testing single URL")
+=======
+parser.add_argument("--debug", action='store_true',  help="Dont use path deconstruction and recon scan.
+                                                           Good for testing single URL")
+>>>>>>> 8afb51f (First commit)
 parser.add_argument("--url", help="Custom URL to crawl")
 args = parser.parse_args()
 
