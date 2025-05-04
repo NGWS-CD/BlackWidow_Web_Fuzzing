@@ -632,7 +632,7 @@ class Crawler:
             driver.get(attack_vector)
 
             # Inspect
-            successful_xss = successful_xss.union( self.inspect_attack(url) )
+            successful_xss = successful_xss.union( self.inspect_attack(attack_vector) )
 
         return successful_xss
 
