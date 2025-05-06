@@ -55,6 +55,9 @@ def remove_alerts(driver):
         alert.dismiss()
     except NoAlertPresentException:
         pass
+    except:
+        print("unknown exception occured!")
+        driver = None
 
 
 def depth(edge):
