@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Black Widow - Blackbox Data-driven Web Scanning
 
 ## Running Black Widow
-=======
-# Run
->>>>>>> 8afb51f (First commit)
-=======
-# Black Widow - Blackbox Data-driven Web Scanning
-
-## Running Black Widow
->>>>>>> a268356 (Updates to readme)
 
 1. Add chromedriver to your path
 
