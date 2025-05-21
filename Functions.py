@@ -290,7 +290,17 @@ def allow_edge(graph, edge):
     so = same_origin(from_url, to_url)
 
     # TODO: More general solutions ? e.g regex patterns, counts etc.
-    blacklisted_terms = []
+    # blacklisted_terms = []
+    blacklisted_terms = [
+        "setup.php",       # DVWA 설정 페이지 직접 접근 방지
+        "db_reset",        # 만약 URL에 이런 파라미터가 있다면
+        "/reset",          # URL 경로에 /reset이 포함된 경우
+        "create_db",       # URL에 이런 키워드가 포함된 경우
+        "security.php"
+        # "logout",        # 기존 예시
+        # "LogOut",
+        # "signout"
+    ]
     # For example
     # blacklisted_terms.extend( ["logout"] )
     if blacklisted_terms:
@@ -774,7 +784,8 @@ def set_standard_values(old_form):
             elif form_el.name == "email":
                 form_el.value = "jaekpot@localhost.com"
             else:
-                form_el.value = "jAEkPot"
+                # form_el.value = "jAEkPot"
+                form_el.value = "admin"
         elif form_el.itype == "textarea":
             form_el.value = "jAEkPot"
         elif form_el.itype == "email":
@@ -782,7 +793,8 @@ def set_standard_values(old_form):
         elif form_el.itype == "hidden":
             pass
         elif form_el.itype == "password":
-            form_el.value = "jAEkPot"
+            form_el.value = "password"
+            # form_el.value = "jAEkPot"
             #form_el.value = "jAEkPot1"
         elif form_el.itype == "number":
             # TODO Look at min/max/step/maxlength to pick valid numbers
