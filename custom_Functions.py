@@ -128,6 +128,8 @@ def find_state(driver, graph, edge):
                     logging.error(e)
                     return False
             else:
+                print("error occur in path: ", edge_in_path)
+                path.clear()
                 raise Exception(
                     "Can't handle method (%s) in find_state" % method)
 
