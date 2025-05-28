@@ -18,8 +18,11 @@ import operator
 import Classes
 from extractors.Forms import extract_forms, parse_form
 
+DEBUG = False
 
 # From: https://stackoverflow.com/a/47298910
+
+
 def send(driver, cmd, params={}):
     resource = "/session/%s/chromium/send_command_and_get_result" % driver.session_id
     url = driver.command_executor._url + resource
@@ -80,6 +83,8 @@ def dom_depth(edge):
 
 def find_state(driver, graph, edge):
     path = rec_find_path(graph, edge)
+    if DEBUG:
+        print(path)
 
     for edge_in_path in path:
         method = edge_in_path.value.method
