@@ -83,6 +83,7 @@ def dom_depth(edge):
 
 def find_state(driver, graph, edge):
     path = rec_find_path(graph, edge)
+
     if DEBUG:
         print(path)
 
