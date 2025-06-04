@@ -911,7 +911,7 @@ def enter_iframe(driver, target_frame):
     return False
 
 
-def find_login_form(driver, graph, early_state=False):
+def find_login_form(driver):
     forms = extract_forms(driver)
     for form in forms:
         for form_input in form.inputs:
