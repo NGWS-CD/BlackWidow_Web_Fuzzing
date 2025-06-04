@@ -734,6 +734,7 @@ def form_fill(driver, target_form):
 
 def ui_form_fill(driver, target_form):
     logging.debug("Filling ui_form " + str(target_form))
+    logging.debug("current driver"+str(driver))
 
     # Ensure we don't have any alerts before filling in form
     try:
