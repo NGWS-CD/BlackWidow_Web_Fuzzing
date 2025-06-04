@@ -254,9 +254,11 @@ def follow_edge(driver, graph, edge):
 
 
 # Checks if two URLs target the same origin
-def same_origin(u1, u2):
+def same_origin(u1, u2, debug):
     p1 = urlparse(u1)
     p2 = urlparse(u2)
+
+    print(p1, p2)
 
     return (p1.scheme == p2.scheme
             and p1.netloc == p2.netloc)
